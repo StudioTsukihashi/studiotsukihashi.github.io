@@ -1,4 +1,4 @@
-# Studio Tsukihashi – Website Version 1.0
+# Studio Tsukihashi – Website Version 2.0
 
 ## Enthaltene Dateien
 
@@ -37,3 +37,15 @@ Danach kann der Platzhalter im Kopfbereich durch ein `<img>` ersetzt werden.
 - Romanautorin: Autorenname folgt
 - Projekte: Tsuki no Serenade, The World is Life, Umi kara kita otoko
 - Originales Studio-Logo als weboptimierte WebP-Datei eingebaut
+
+## Neu in Version 2.0
+
+- sanfte Hero-Animation
+- dezente Sakura-Partikel
+- Maus-Parallax am Studio-Logo
+- Scroll-Reveal für Abschnitte und Karten
+- Hover-Effekte für Projekte, Autoren und Neuigkeiten
+- aktive Navigationsanzeige
+- neuer Bereich „Neuigkeiten“
+- optimierte Darstellung bei reduzierten Bewegungseinstellungen
+- Studio-Logo im Footer

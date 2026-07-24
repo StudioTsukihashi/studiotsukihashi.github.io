@@ -1,0 +1,620 @@
+
+.team-page,
+.profile-page {
+  background:
+    radial-gradient(circle at 88% 12%, rgba(201,169,106,.11), transparent 28rem),
+    radial-gradient(circle at 10% 65%, rgba(119,151,184,.08), transparent 30rem),
+    var(--v4-bg);
+}
+
+.team-hero,
+.profile-hero {
+  position: relative;
+  width: min(var(--v4-max), calc(100% - 2.4rem));
+  min-height: 72svh;
+  margin: 0 auto;
+  padding: 9rem 0 5rem;
+  display: grid;
+  align-items: center;
+  gap: clamp(2rem, 7vw, 7rem);
+  border-bottom: 1px solid var(--v4-line);
+}
+
+.team-hero {
+  grid-template-columns: 1fr .55fr;
+}
+
+.team-hero h1,
+.profile-hero h1 {
+  margin: 0;
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(4rem, 9vw, 8rem);
+  line-height: .88;
+  letter-spacing: -.045em;
+}
+
+.team-hero-copy > p:last-child,
+.profile-intro,
+.team-section-lead {
+  max-width: 48rem;
+  color: var(--v4-muted);
+  line-height: 1.8;
+}
+
+.team-hero-mark {
+  justify-self: center;
+  color: rgba(255,255,255,.06);
+  font-family: serif;
+  font-size: clamp(12rem, 28vw, 24rem);
+  line-height: 1;
+}
+
+.team-section-lead {
+  margin-top: 1.2rem;
+}
+
+.team-card-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.team-card {
+  display: grid;
+  grid-template-columns: minmax(16rem, .7fr) 1.3fr;
+  overflow: hidden;
+  min-height: 32rem;
+  border: 1px solid var(--v4-line);
+  border-radius: 2rem;
+  background: rgba(255,255,255,.018);
+  box-shadow: var(--v4-shadow);
+}
+
+.team-card-visual {
+  position: relative;
+  display: grid;
+  place-items: center;
+  padding: 3rem;
+  background:
+    radial-gradient(circle, rgba(201,169,106,.15), transparent 58%),
+    #0b0e14;
+}
+
+.team-card-visual img {
+  width: min(18rem, 80%);
+  border-radius: 50%;
+  border: 1px solid var(--v4-line);
+}
+
+.team-card-visual span {
+  position: absolute;
+  left: 1rem;
+  bottom: 1rem;
+  color: var(--v4-muted);
+  font-size: .65rem;
+}
+
+.team-card-copy {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: clamp(2rem, 6vw, 5rem);
+}
+
+.team-role {
+  color: var(--v4-gold);
+  font-size: .7rem;
+  font-weight: 700;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+}
+
+.team-card h3 {
+  margin: .8rem 0 1rem;
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(2.7rem, 6vw, 5rem);
+  line-height: .93;
+}
+
+.team-card h3 span,
+.team-card h3 small {
+  display: block;
+}
+
+.team-card h3 small {
+  margin-top: .55rem;
+  color: var(--v4-muted);
+  font-size: .45em;
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: 400;
+}
+
+.team-card-copy > p:not(.team-role) {
+  max-width: 42rem;
+  color: var(--v4-muted);
+}
+
+.team-card-copy .v4-button {
+  align-self: flex-start;
+  margin-top: 1rem;
+}
+
+.team-privacy-panel {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  padding: clamp(2rem, 6vw, 5rem);
+  border: 1px solid var(--v4-line);
+  border-radius: 2rem;
+  background:
+    radial-gradient(circle at 10% 10%, rgba(119,151,184,.12), transparent 18rem),
+    rgba(255,255,255,.018);
+}
+
+.team-privacy-panel h2 {
+  margin: 0;
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(2.7rem, 5vw, 4.8rem);
+  line-height: .96;
+}
+
+.team-privacy-copy {
+  color: var(--v4-muted);
+}
+
+.team-privacy-copy ul {
+  margin: 1.5rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.team-privacy-copy li {
+  padding: .8rem 0 .8rem 1.4rem;
+  border-bottom: 1px solid var(--v4-line);
+  position: relative;
+}
+
+.team-privacy-copy li::before {
+  content: "—";
+  position: absolute;
+  left: 0;
+  color: var(--v4-gold);
+}
+
+.profile-process {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1px;
+  border-block: 1px solid var(--v4-line);
+}
+
+.profile-process div {
+  padding: 1.6rem;
+  border-right: 1px solid var(--v4-line);
+}
+
+.profile-process div:last-child {
+  border-right: 0;
+}
+
+.profile-process span {
+  color: var(--v4-gold);
+  font-size: .68rem;
+}
+
+.profile-process strong {
+  display: block;
+  margin: 1rem 0 .7rem;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.35rem;
+}
+
+.profile-process p {
+  margin: 0;
+  color: var(--v4-muted);
+  font-size: .82rem;
+}
+
+.profile-hero {
+  grid-template-columns: .72fr 1.28fr;
+}
+
+.profile-portrait {
+  position: relative;
+  display: grid;
+  place-items: center;
+  min-height: 34rem;
+  padding: 3rem;
+  border: 1px solid var(--v4-line);
+  border-radius: 2rem;
+  background:
+    radial-gradient(circle, rgba(201,169,106,.13), transparent 52%),
+    rgba(255,255,255,.018);
+}
+
+.profile-portrait img {
+  width: min(20rem, 82%);
+  border-radius: 50%;
+  border: 1px solid var(--v4-line);
+}
+
+.profile-portrait span {
+  position: absolute;
+  left: 1rem;
+  bottom: 1rem;
+  color: var(--v4-muted);
+  font-size: .65rem;
+}
+
+.profile-hero h1 span,
+.profile-hero h1 small {
+  display: block;
+}
+
+.profile-hero h1 small {
+  margin-top: .8rem;
+  color: var(--v4-muted);
+  font-size: .37em;
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: 400;
+  letter-spacing: .02em;
+}
+
+.profile-two-column {
+  display: grid;
+  grid-template-columns: .9fr 1.1fr;
+  gap: 5rem;
+}
+
+.profile-body {
+  color: var(--v4-muted);
+  font-size: 1.05rem;
+  line-height: 1.85;
+}
+
+.profile-statement {
+  text-align: center;
+  border-block: 1px solid var(--v4-line);
+}
+
+.profile-statement blockquote {
+  max-width: 62rem;
+  margin: 0 auto;
+  padding: 0;
+  border: 0;
+  color: var(--v4-text);
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(2rem, 4vw, 3.8rem);
+  line-height: 1.26;
+}
+
+.profile-statement > p {
+  max-width: 48rem;
+  margin: 2rem auto 0;
+  color: var(--v4-gold-soft);
+}
+
+.profile-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .7rem;
+}
+
+.profile-tags span {
+  padding: .8rem 1rem;
+  border: 1px solid var(--v4-line-strong);
+  border-radius: 999px;
+  color: #d7d2ca;
+  background: rgba(255,255,255,.018);
+  font-size: .78rem;
+}
+
+.profile-project-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.profile-project-grid article {
+  min-height: 18rem;
+  padding: 2rem;
+  border: 1px solid var(--v4-line);
+  border-radius: var(--v4-radius);
+  background: rgba(255,255,255,.018);
+}
+
+.profile-project-grid article > p {
+  margin: 0;
+  color: var(--v4-gold);
+  font-size: .68rem;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+}
+
+.profile-project-grid h3 {
+  margin: 2rem 0 .8rem;
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(2rem, 4vw, 3rem);
+}
+
+.profile-project-grid span {
+  display: block;
+  color: var(--v4-muted);
+}
+
+.profile-project-grid a {
+  display: inline-block;
+  margin-top: 1.2rem;
+  color: var(--v4-gold-soft);
+}
+
+.profile-principles {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.principle-card {
+  min-height: 18rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 2rem;
+  border: 1px solid var(--v4-line);
+  border-radius: var(--v4-radius);
+  background:
+    radial-gradient(circle at top right, rgba(201,169,106,.12), transparent 14rem),
+    rgba(255,255,255,.018);
+}
+
+.principle-card p {
+  color: var(--v4-gold);
+  font-size: .68rem;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+}
+
+.principle-card strong {
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  line-height: 1.05;
+}
+
+.principle-card span {
+  margin-top: .8rem;
+  color: var(--v4-muted);
+}
+
+.profile-privacy-note {
+  max-width: 60rem;
+  margin: 1.3rem auto 0;
+  color: #777b80;
+  font-size: .7rem;
+  line-height: 1.7;
+  text-align: center;
+}
+
+@media (max-width: 980px) {
+  .team-hero,
+  .profile-hero,
+  .team-card,
+  .team-privacy-panel,
+  .profile-two-column {
+    grid-template-columns: 1fr;
+  }
+
+  .team-hero-mark {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+  }
+
+  .profile-process {
+    grid-template-columns: 1fr;
+  }
+
+  .profile-process div {
+    border-right: 0;
+    border-bottom: 1px solid var(--v4-line);
+  }
+
+  .profile-process div:last-child {
+    border-bottom: 0;
+  }
+}
+
+@media (max-width: 700px) {
+  .team-hero,
+  .profile-hero {
+    width: min(100% - 1.4rem, var(--v4-max));
+  }
+
+  .team-card-visual,
+  .profile-portrait {
+    min-height: 22rem;
+  }
+
+  .profile-project-grid,
+  .profile-principles {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* Creative Signature System – V4.1 */
+
+.team-card-signature,
+.profile-signature {
+  --signature-metal: #e7e4dc;
+  --signature-glow: rgba(168,198,230,.28);
+  --signature-gold: rgba(222,197,137,.50);
+}
+
+.team-card-signature {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  pointer-events: none;
+}
+
+.signature-emblem {
+  position: relative;
+  width: min(22rem, 78%);
+  aspect-ratio: 1;
+  display: grid;
+  place-items: center;
+}
+
+.signature-crescent {
+  position: absolute;
+  width: 56%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: 1px solid var(--signature-metal);
+  box-shadow:
+    0 0 2rem var(--signature-glow),
+    inset 0 0 1.4rem rgba(255,255,255,.04);
+}
+
+.signature-crescent::after {
+  content: "";
+  position: absolute;
+  width: 88%;
+  height: 88%;
+  top: 6%;
+  right: -18%;
+  border-radius: 50%;
+  background: #0b0e14;
+}
+
+.signature-crescent-a {
+  transform: translateX(-19%) rotate(9deg);
+  animation: signature-orbit-a 12s ease-in-out infinite;
+}
+
+.signature-crescent-b {
+  transform: translateX(19%) rotate(189deg);
+  animation: signature-orbit-b 12s ease-in-out infinite;
+}
+
+.signature-name {
+  position: relative;
+  z-index: 5;
+  display: grid;
+  gap: .35rem;
+  text-align: center;
+  color: rgba(255,255,255,.90);
+  text-shadow: 0 0 1.4rem var(--signature-glow);
+}
+
+.signature-name strong {
+  font-family: serif;
+  font-size: clamp(1.3rem, 3.6vw, 2.15rem);
+  letter-spacing: .16em;
+  font-weight: 500;
+}
+
+.signature-name small {
+  color: rgba(255,255,255,.42);
+  font-size: .6rem;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+}
+
+.signature-star {
+  position: absolute;
+  width: .34rem;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: #f0dba1;
+  box-shadow: 0 0 1rem .25rem var(--signature-gold);
+  animation: signature-star-pulse 3.6s ease-in-out infinite;
+}
+
+.signature-star-a { top: 28%; left: 17%; animation-delay: -.8s; }
+.signature-star-b { bottom: 29%; right: 16%; animation-delay: -2s; }
+
+@keyframes signature-orbit-a {
+  0%,100% { transform: translateX(-19%) rotate(9deg) scale(.98); }
+  50% { transform: translateX(-26%) rotate(28deg) scale(1.04); }
+}
+
+@keyframes signature-orbit-b {
+  0%,100% { transform: translateX(19%) rotate(189deg) scale(.98); }
+  50% { transform: translateX(26%) rotate(168deg) scale(1.04); }
+}
+
+@keyframes signature-star-pulse {
+  0%,100% { opacity: .25; transform: scale(.75); }
+  50% { opacity: 1; transform: scale(1.25); }
+}
+
+.profile-signature-stage {
+  position: relative;
+  min-height: 36rem;
+  overflow: hidden;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--v4-line);
+  border-radius: 2rem;
+  background:
+    radial-gradient(circle at center, rgba(119,151,184,.13), transparent 48%),
+    radial-gradient(circle at 50% 30%, rgba(201,169,106,.09), transparent 30%),
+    rgba(255,255,255,.018);
+}
+
+.profile-signature-stage::before {
+  content: "";
+  position: absolute;
+  inset: 8%;
+  border-radius: 50%;
+  border: 1px solid rgba(255,255,255,.035);
+  animation: signature-ring 18s linear infinite;
+}
+
+@keyframes signature-ring {
+  to { transform: rotate(360deg); }
+}
+
+.profile-signature-stage .signature-emblem {
+  width: min(31rem, 88%);
+}
+
+.profile-signature-stage .signature-name strong {
+  font-size: clamp(1.6rem, 5vw, 3.2rem);
+}
+
+.profile-signature-caption {
+  position: absolute;
+  left: 1.1rem;
+  right: 1.1rem;
+  bottom: 1rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  color: var(--v4-muted);
+  font-size: .65rem;
+}
+
+.profile-signature-caption span:last-child {
+  text-align: right;
+}
+
+.signature-system-note {
+  margin-top: 1rem;
+  padding: 1rem 1.2rem;
+  border-left: 2px solid var(--v4-gold);
+  color: var(--v4-muted);
+  background: rgba(255,255,255,.018);
+  font-size: .8rem;
+  line-height: 1.7;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .signature-crescent,
+  .signature-star,
+  .profile-signature-stage::before {
+    animation: none !important;
+  }
+}

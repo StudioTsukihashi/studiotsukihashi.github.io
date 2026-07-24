@@ -1,12 +1,177 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-    <meta charset="UTF-8">
-    <title>Studio Tsukihashi</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Studio Tsukihashi – ein unabhängiges, familiäres Autorenstudio für Manga, Romane und gemeinsame Geschichten.">
+  <title>Studio Tsukihashi | Geschichten verbinden Welten</title>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="script.js"></script>
 </head>
 <body>
-    <h1>Studio Tsukihashi</h1>
-    <p>物語で世界をつなぐ。</p>
-    <p>Unsere Website befindet sich derzeit im Aufbau.</p>
+  <header class="site-header">
+    <a class="brand" href="#start" aria-label="Zur Startseite">
+      <div class="brand-mark" aria-hidden="true">月</div>
+      <div>
+        <strong>Studio Tsukihashi</strong>
+        <span>月橋スタジオ</span>
+      </div>
+    </a>
+
+    <button class="menu-button" type="button" aria-expanded="false" aria-controls="main-nav">
+      Menü
+    </button>
+
+    <nav id="main-nav" class="main-nav" aria-label="Hauptnavigation">
+      <a href="#studio">Das Studio</a>
+      <a href="#projekte">Projekte</a>
+      <a href="#autoren">Autoren</a>
+      <a href="#kontakt">Kontakt</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="start" class="hero">
+      <div class="hero-glow"></div>
+      <div class="hero-content">
+        <p class="eyebrow">Unabhängiges Autorenstudio</p>
+        <h1>Studio Tsukihashi</h1>
+        <p class="japanese">物語で世界をつなぐ。</p>
+        <p class="lead">
+          Geschichten verbinden Welten. Wir entwickeln Manga, Romane und gemeinsame Projekte
+          mit persönlicher Handschrift, kreativer Freiheit und viel Herz.
+        </p>
+        <div class="hero-actions">
+          <a class="button primary" href="#projekte">Unsere Projekte</a>
+          <a class="button secondary" href="#studio">Mehr über uns</a>
+        </div>
+      </div>
+
+      <div class="moon-scene" aria-hidden="true">
+        <div class="moon"></div>
+        <div class="bridge"></div>
+      </div>
+    </section>
+
+    <section id="studio" class="section">
+      <div class="section-heading">
+        <p class="eyebrow">Unsere Philosophie</p>
+        <h2>Klein, familiär und ganz nah an den Geschichten</h2>
+      </div>
+      <div class="two-column">
+        <div>
+          <p>
+            Studio Tsukihashi ist ein unabhängiges Autorenstudio. Im Mittelpunkt stehen
+            die eigenen Werke zweier Autoren: einer Romanautorin und eines Manga-Autors.
+          </p>
+          <p>
+            Wir möchten bewusst überschaubar bleiben. Das Studio darf wachsen – aber nur
+            mit Menschen, die unsere Werte teilen und unsere Geschichten als Zeichner,
+            Illustrator, Charakterdesigner, Letterer oder Übersetzer bereichern.
+          </p>
+        </div>
+        <blockquote>
+          „Wir wachsen nicht, um größer zu werden. Wir wachsen, um bessere Geschichten
+          erzählen zu können.“
+        </blockquote>
+      </div>
+    </section>
+
+    <section id="projekte" class="section section-dark">
+      <div class="section-heading">
+        <p class="eyebrow">Unsere Welten</p>
+        <h2>Projekte</h2>
+      </div>
+
+      <div class="project-grid">
+        <article class="project-card featured">
+          <span class="status">In Entwicklung</span>
+          <p class="project-type">Manga · Drama · Romance</p>
+          <h3>Tsuki no Serenade</h3>
+          <p>
+            Eine Geschichte über Musik, Schutz, Verlust und die leisen Begegnungen,
+            die zwei Leben verändern können.
+          </p>
+          <span class="project-note">Band 1: Musician &amp; Protector</span>
+        </article>
+
+        <article class="project-card">
+          <span class="status">Konzeptphase</span>
+          <p class="project-type">Gemeinschaftsprojekt</p>
+          <h3>The World is Life</h3>
+          <p>
+            Zwei Autoren, zwei Welten – und eine Grenze, die plötzlich nicht mehr existiert.
+          </p>
+        </article>
+
+        <article class="project-card">
+          <span class="status">In Vorbereitung</span>
+          <p class="project-type">Romanprojekt</p>
+          <h3>Weitere Geschichten</h3>
+          <p>
+            Neue Welten entstehen bereits. Weitere Informationen folgen zu einem späteren Zeitpunkt.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section id="autoren" class="section">
+      <div class="section-heading">
+        <p class="eyebrow">Menschen hinter den Welten</p>
+        <h2>Die Autoren</h2>
+      </div>
+
+      <div class="author-grid">
+        <article class="author-card">
+          <div class="author-symbol">斗</div>
+          <div>
+            <p class="author-role">Manga-Autor</p>
+            <h3>月橋 斗流天</h3>
+            <p>
+              Entwickelt Manga, Charaktere und Welten mit einem besonderen Blick für
+              Atmosphäre, Beziehungen und die stillen Momente zwischen großen Ereignissen.
+            </p>
+          </div>
+        </article>
+
+        <article class="author-card">
+          <div class="author-symbol">星</div>
+          <div>
+            <p class="author-role">Romanautorin</p>
+            <h3>Autorenname folgt</h3>
+            <p>
+              Schreibt eigenständige Romane und bringt ihre eigene Stimme, ihre Welten
+              und ihre kreative Freiheit in Studio Tsukihashi ein.
+            </p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="kontakt" class="section contact-section">
+      <div class="contact-card">
+        <p class="eyebrow">Kontakt</p>
+        <h2>Die Reise beginnt gerade erst</h2>
+        <p>
+          Studio Tsukihashi befindet sich im Aufbau. Neuigkeiten zu unseren Projekten,
+          Veröffentlichungen und zukünftigen Kooperationen folgen hier.
+        </p>
+        <a class="button primary" href="mailto:DEINE-EMAIL@BEISPIEL.DE">E-Mail schreiben</a>
+        <p class="small-note">Bitte die Platzhalter-E-Mail vor der Veröffentlichung ersetzen.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div>
+      <strong>Studio Tsukihashi</strong>
+      <span>物語で世界をつなぐ。</span>
+    </div>
+    <div class="footer-links">
+      <a href="impressum.html">Impressum</a>
+      <a href="datenschutz.html">Datenschutz</a>
+    </div>
+    <p>© <span id="year"></span> Studio Tsukihashi. Alle Rechte vorbehalten.</p>
+  </footer>
 </body>
 </html>

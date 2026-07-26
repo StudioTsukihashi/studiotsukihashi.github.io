@@ -1,0 +1,4 @@
+Studio Tsukihashi Website
+Version: 4.2.0
+Status: Quality review build
+Date: 2026-07-26

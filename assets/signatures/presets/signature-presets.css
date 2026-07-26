@@ -1,0 +1,8 @@
+/* Creative Signature System 2.0 · Presets */
+.sig-symbol--double-moon { position:absolute; inset:0; }
+.sig-crescent { position:absolute; left:22%; top:22%; width:56%; aspect-ratio:1; border-radius:50%; border:1px solid var(--sig-primary); box-shadow:0 0 2rem var(--sig-glow),inset 0 0 1.4rem rgba(255,255,255,.04); }
+.sig-crescent::after { content:""; position:absolute; width:88%; height:88%; top:6%; right:-18%; border-radius:50%; background:#0b0e14; }
+.sig-crescent--left { transform:translateX(-19%) rotate(9deg); }
+.sig-crescent--right { transform:translateX(19%) rotate(189deg); }
+.sig-secondary-star { position:absolute; width:.36rem; aspect-ratio:1; border-radius:50%; background:var(--sig-accent); box-shadow:0 0 1rem .25rem color-mix(in srgb,var(--sig-accent) 55%,transparent); }
+.sig-secondary-star:nth-child(1){top:28%;left:17%}.sig-secondary-star:nth-child(2){bottom:29%;right:16%}

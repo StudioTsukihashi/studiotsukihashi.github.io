@@ -1,4 +1,0 @@
-Studio Tsukihashi Website
-Version: 4.1.1
-Status: GitHub release package
-Date: 2026-07-25

@@ -1,7 +1,0 @@
-.sakura-layer{position:fixed;inset:0;z-index:3;overflow:hidden;pointer-events:none;contain:strict}
-.sakura-petal{position:absolute;top:-12vh;left:var(--start-x);width:var(--petal-size);height:calc(var(--petal-size)*.72);opacity:var(--petal-opacity);border-radius:70% 30% 68% 32%;background:radial-gradient(circle at 30% 27%,rgba(255,255,255,.92),transparent 25%),linear-gradient(135deg,#f9e3ec 0%,#f1bfd1 58%,#d998b2 100%);filter:drop-shadow(0 .2rem .35rem rgba(105,45,68,.13));transform-origin:55% 45%;will-change:transform;animation:sakura-fall var(--fall-duration) linear var(--delay) infinite,sakura-wind var(--wind-duration) ease-in-out var(--delay) infinite alternate}
-.sakura-petal::after{content:"";position:absolute;inset:43% 40% 43% 40%;border-radius:50%;background:rgba(165,90,118,.38)}
-@keyframes sakura-fall{0%{transform:translate3d(0,-12vh,0) rotate(0deg)}34%{transform:translate3d(var(--drift-one),34vh,0) rotate(155deg)}68%{transform:translate3d(var(--drift-two),72vh,0) rotate(325deg)}100%{transform:translate3d(var(--drift-three),114vh,0) rotate(540deg)}}
-@keyframes sakura-wind{from{margin-left:-1.15rem}to{margin-left:1.35rem}}
-@media(max-width:720px){.sakura-petal:nth-child(3n){display:none}}
-@media(prefers-reduced-motion:reduce){.sakura-layer{display:none}}

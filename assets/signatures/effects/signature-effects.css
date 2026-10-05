@@ -1,0 +1,30 @@
+/* Creative Signature System 2.0 · Effects */
+.sig-background--night { border-radius:50%; background:radial-gradient(circle,rgba(119,151,184,.10),transparent 66%); }
+.sig-atmosphere--moon-haze { border-radius:50%; background:radial-gradient(circle at 50% 45%,rgba(155,185,215,.13),transparent 48%); filter:blur(8px); }
+.sig-glow--moon-glow { inset:14%; border-radius:50%; box-shadow:0 0 3.5rem var(--sig-glow), inset 0 0 2.5rem rgba(255,255,255,.025); }
+.sig-particle { position:absolute; width:.34rem; aspect-ratio:1; border-radius:50%; background:var(--sig-accent); box-shadow:0 0 1rem .22rem color-mix(in srgb,var(--sig-accent) 55%,transparent); }
+.sig-particle:nth-child(1){top:27%;left:17%;animation-delay:-.8s}.sig-particle:nth-child(2){bottom:28%;right:16%;animation-delay:-2s}.sig-particle:nth-child(3){top:17%;right:28%;animation-delay:-3.1s}
+.sig-motion--orbit { animation:sig-orbit 12s ease-in-out infinite; transform-origin:center; }
+.sig-light--glow-pulse { animation:sig-glow-pulse 5.5s ease-in-out infinite; }
+.sig-particles--stardust .sig-particle { animation:sig-star-shine 3.6s ease-in-out infinite; }
+.sig-transition--moon-reveal { animation:sig-moon-reveal 1.4s cubic-bezier(.2,.8,.2,1) both; }
+.signature-host.sig-interaction--hover-glow { transition:filter .7s ease,transform .7s ease; }
+.signature-host.sig-interaction--hover-glow:hover { filter:brightness(1.08); transform:scale(1.012); }
+@keyframes sig-orbit {0%,100%{transform:rotate(-2deg) scale(.985)}50%{transform:rotate(7deg) scale(1.025)}}
+@keyframes sig-glow-pulse {0%,100%{opacity:.72;filter:blur(0)}50%{opacity:1;filter:blur(1px)}}
+@keyframes sig-star-shine {0%,100%{opacity:.28;transform:scale(.72)}50%{opacity:1;transform:scale(1.18)}}
+@keyframes sig-moon-reveal {from{opacity:0;transform:translateY(12px) scale(.96)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){.signature-host *, .signature-host{animation:none!important;transition:none!important;transform:none!important}}
+
+/* Mina Vale · Rose & mystische Katze */
+.sig-atmosphere--rose-haze { border-radius:48%; background:radial-gradient(circle at 28% 46%,rgba(181,33,50,.16),transparent 38%),radial-gradient(circle at 70% 52%,rgba(234,217,154,.07),transparent 44%); filter:blur(10px); }
+.sig-glow--rose-glow { inset:12% 8%; border-radius:48%; box-shadow:0 0 3.2rem var(--sig-glow),inset 0 0 2rem rgba(234,217,154,.025); }
+.sig-motion--breathe { animation:sig-breathe 10s ease-in-out infinite; transform-origin:42% 58%; }
+.sig-transition--soft-reveal { animation:sig-soft-reveal 1.45s cubic-bezier(.2,.8,.2,1) both; }
+.sig-particles--petal-dust .sig-particle { width:.28rem; border-radius:65% 35% 70% 30%; background:var(--sig-primary); box-shadow:0 0 .8rem color-mix(in srgb,var(--sig-primary) 45%,transparent); animation:sig-petal-drift 7.5s ease-in-out infinite; }
+.sig-secondary-petal { position:absolute; width:.52rem; height:.3rem; border-radius:70% 30% 70% 30%; background:color-mix(in srgb,var(--sig-primary) 78%,#fff 22%); opacity:.5; filter:drop-shadow(0 0 .45rem var(--sig-glow)); animation:sig-petal-float 8s ease-in-out infinite; }
+.sig-secondary-petal:nth-child(1){top:24%;left:28%;transform:rotate(24deg);animation-delay:-1.5s}.sig-secondary-petal:nth-child(2){bottom:27%;right:18%;transform:rotate(-18deg);animation-delay:-4.6s}
+@keyframes sig-breathe {0%,100%{transform:translateY(0) rotate(-.25deg) scale(.995)}50%{transform:translateY(-3px) rotate(.35deg) scale(1.008)}}
+@keyframes sig-soft-reveal {from{opacity:0;transform:translateY(9px) scale(.975);filter:blur(3px)}to{opacity:1;transform:none;filter:none}}
+@keyframes sig-petal-drift {0%,100%{opacity:.18;transform:translate(0,0) rotate(0)}45%{opacity:.65}55%{transform:translate(8px,5px) rotate(20deg)}80%{opacity:.28}}
+@keyframes sig-petal-float {0%,100%{opacity:.22;margin-top:0}45%{opacity:.58;margin-top:4px}55%{margin-top:4px}80%{opacity:.3;margin-top:0}}

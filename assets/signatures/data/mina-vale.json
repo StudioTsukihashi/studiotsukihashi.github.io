@@ -1,0 +1,45 @@
+{
+  "id": "mina-vale",
+  "status": "public",
+  "version": "2.0",
+  "person": {
+    "publicName": {
+      "latin": "Mina Vale"
+    }
+  },
+  "role": "Mitgründerin, Autorin und Romanautorin",
+  "signature": {
+    "preset": "rose-cat",
+    "symbol": {
+      "primary": "rose-cat",
+      "secondary": [
+        "petal",
+        "petal"
+      ]
+    },
+    "colors": {
+      "primary": "#b52132",
+      "secondary": "#48503a",
+      "accent": "#ead99a",
+      "glow": "rgba(181,33,50,.25)"
+    },
+    "effects": {
+      "atmosphere": "rose-haze",
+      "glow": "rose-glow",
+      "particles": "petal-dust"
+    },
+    "animation": {
+      "movement": "breathe",
+      "light": "glow-pulse",
+      "transition": "soft-reveal",
+      "interaction": "hover-glow"
+    },
+    "artwork": {
+      "src": "mina-vale-signature.webp",
+      "alt": "Mina Vale mit roter Rose und mystischer dunkler Katze"
+    }
+  },
+  "accessibility": {
+    "label": "Persönliche Creative Signature von Mina Vale: rote Rose, mystische dunkle Katze und goldener Schriftzug."
+  }
+}

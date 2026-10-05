@@ -1,0 +1,429 @@
+
+.philosophy-page {
+  background:
+    radial-gradient(circle at 82% 8%, rgba(201,169,106,.10), transparent 28rem),
+    radial-gradient(circle at 12% 62%, rgba(119,151,184,.08), transparent 30rem),
+    var(--v4-bg);
+}
+
+.philosophy-hero {
+  position: relative;
+  width: min(var(--v4-max), calc(100% - 2.4rem));
+  min-height: 88svh;
+  margin: 0 auto;
+  padding: 9rem 0 6rem;
+  display: grid;
+  grid-template-columns: 1.15fr .85fr;
+  align-items: center;
+  gap: clamp(2rem, 7vw, 7rem);
+  border-bottom: 1px solid var(--v4-line);
+}
+
+.philosophy-hero h1 {
+  margin: 0;
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(4.3rem, 9vw, 8.6rem);
+  line-height: .86;
+  letter-spacing: -.05em;
+}
+
+.philosophy-japanese {
+  margin: 2rem 0 1rem;
+  color: var(--v4-gold-soft);
+  font-size: clamp(1rem, 2vw, 1.4rem);
+  letter-spacing: .2em;
+}
+
+.philosophy-lead {
+  max-width: 44rem;
+  color: var(--v4-muted);
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+.philosophy-symbol {
+  position: relative;
+  display: grid;
+  place-items: center;
+  min-height: 28rem;
+}
+
+.philosophy-symbol span {
+  position: relative;
+  z-index: 2;
+  color: rgba(255,255,255,.65);
+  font-family: serif;
+  font-size: clamp(2.6rem, 6vw, 5rem);
+  letter-spacing: .22em;
+}
+
+.philosophy-moon {
+  position: absolute;
+  width: min(28rem, 80vw);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: 1px solid rgba(236,220,184,.15);
+  box-shadow:
+    inset 4rem -4rem 7rem rgba(255,255,255,.03),
+    0 0 7rem rgba(201,169,106,.08);
+}
+
+.philosophy-moon::after {
+  content: "";
+  position: absolute;
+  width: 88%;
+  height: 88%;
+  right: -12%;
+  top: 6%;
+  border-radius: 50%;
+  background: var(--v4-bg);
+  box-shadow: -1rem 0 4rem rgba(201,169,106,.06);
+}
+
+.philosophy-intro-grid,
+.philosophy-collaboration-grid {
+  display: grid;
+  grid-template-columns: .95fr 1.05fr;
+  gap: 5rem;
+}
+
+.philosophy-intro h2,
+.philosophy-collaboration h2 {
+  margin: 0;
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(2.8rem, 5vw, 5rem);
+  line-height: .98;
+}
+
+.philosophy-intro-copy,
+.philosophy-collaboration-copy > p:last-child {
+  color: var(--v4-muted);
+  font-size: 1.05rem;
+  line-height: 1.85;
+}
+
+.philosophy-value-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 1rem;
+}
+
+.philosophy-value-card {
+  position: relative;
+  min-height: 24rem;
+  padding: 1.7rem;
+  overflow: hidden;
+  border: 1px solid var(--v4-line);
+  border-radius: var(--v4-radius);
+  background:
+    radial-gradient(circle at top right, rgba(201,169,106,.09), transparent 13rem),
+    rgba(255,255,255,.018);
+}
+
+.philosophy-value-card:nth-child(1),
+.philosophy-value-card:nth-child(2),
+.philosophy-value-card:nth-child(3) {
+  grid-column: span 2;
+}
+
+.philosophy-value-card:nth-child(4),
+.philosophy-value-card:nth-child(5) {
+  grid-column: span 3;
+}
+
+.philosophy-value-number {
+  color: var(--v4-gold);
+  font-size: .68rem;
+}
+
+.philosophy-value-icon {
+  position: absolute;
+  right: 1rem;
+  top: .2rem;
+  color: rgba(255,255,255,.045);
+  font-family: serif;
+  font-size: 5rem;
+}
+
+.philosophy-value-card h3 {
+  margin: 7rem 0 1rem;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 2.2rem;
+}
+
+.philosophy-value-card p {
+  color: var(--v4-muted);
+  line-height: 1.7;
+}
+
+.philosophy-principle-panel {
+  max-width: 70rem;
+  margin: 0 auto;
+  padding: clamp(2.5rem, 7vw, 6rem);
+  text-align: center;
+  border: 1px solid var(--v4-line);
+  border-radius: 2rem;
+  background:
+    radial-gradient(circle at top, rgba(201,169,106,.14), transparent 24rem),
+    rgba(255,255,255,.018);
+}
+
+.philosophy-principle-panel blockquote {
+  margin: 1rem 0 1.5rem;
+  padding: 0;
+  border: 0;
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(3rem, 7vw, 6rem);
+  line-height: 1;
+}
+
+.philosophy-principle-panel > p:last-child {
+  max-width: 48rem;
+  margin: 0 auto;
+  color: var(--v4-muted);
+  line-height: 1.8;
+}
+
+.creative-process {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.creative-process-line {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 2.15rem;
+  height: 1px;
+  background: var(--v4-line);
+}
+
+.creative-process-line span {
+  display: block;
+  width: 0;
+  height: 100%;
+  background: linear-gradient(90deg, var(--v4-gold), var(--v4-gold-soft));
+  transition: width 1.4s ease;
+}
+
+.creative-process.is-visible .creative-process-line span {
+  width: 100%;
+}
+
+.creative-process-step {
+  position: relative;
+  min-height: 18rem;
+  padding: 1.6rem;
+  border: 1px solid var(--v4-line);
+  border-radius: var(--v4-radius);
+  background: rgba(255,255,255,.018);
+}
+
+.creative-process-step > span {
+  position: relative;
+  z-index: 2;
+  display: inline-grid;
+  place-items: center;
+  width: 2.8rem;
+  height: 2.8rem;
+  border-radius: 50%;
+  color: #17130c;
+  background: var(--v4-gold-soft);
+  font-size: .72rem;
+  font-weight: 700;
+}
+
+.creative-process-step h3 {
+  margin: 4rem 0 .8rem;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.85rem;
+}
+
+.creative-process-step p {
+  color: var(--v4-muted);
+  font-size: .85rem;
+  line-height: 1.7;
+}
+
+.philosophy-collaboration-list {
+  border-top: 1px solid var(--v4-line);
+}
+
+.philosophy-collaboration-list article {
+  display: grid;
+  grid-template-columns: 3rem 1fr;
+  gap: 1.3rem;
+  padding: 1.5rem 0;
+  border-bottom: 1px solid var(--v4-line);
+}
+
+.philosophy-collaboration-list article > span {
+  color: var(--v4-gold);
+  font-size: .7rem;
+}
+
+.philosophy-collaboration-list h3 {
+  margin: 0 0 .4rem;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.65rem;
+}
+
+.philosophy-collaboration-list p {
+  margin: 0;
+  color: var(--v4-muted);
+}
+
+.journey-timeline {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 1.2rem;
+  padding-top: 3rem;
+}
+
+.journey-line {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: .8rem;
+  height: 1px;
+  background: var(--v4-line);
+}
+
+.journey-line span {
+  display: block;
+  width: 0;
+  height: 100%;
+  background: linear-gradient(90deg, var(--v4-gold), var(--v4-gold-soft));
+  transition: width 1.6s ease;
+}
+
+.journey-timeline.is-visible .journey-line span {
+  width: 100%;
+}
+
+.journey-timeline article {
+  position: relative;
+}
+
+.journey-point {
+  position: absolute;
+  top: -2.55rem;
+  left: 0;
+  width: .7rem;
+  height: .7rem;
+  border-radius: 50%;
+  background: var(--v4-gold);
+  box-shadow: 0 0 0 .45rem rgba(201,169,106,.10);
+}
+
+.journey-timeline p {
+  margin: 0 0 .6rem;
+  color: var(--v4-gold);
+  font-size: .66rem;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+
+.journey-timeline h3 {
+  margin: 0;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.55rem;
+}
+
+.philosophy-closing-panel {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 3rem;
+  align-items: end;
+  padding: clamp(2rem, 6vw, 5rem);
+  border: 1px solid var(--v4-line);
+  border-radius: 2rem;
+  background:
+    radial-gradient(circle at 85% 10%, rgba(201,169,106,.16), transparent 18rem),
+    rgba(255,255,255,.018);
+}
+
+.philosophy-closing-panel h2 {
+  margin: 0;
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(3rem, 6vw, 5rem);
+}
+
+.philosophy-closing-panel p:last-child {
+  max-width: 42rem;
+  color: var(--v4-muted);
+}
+
+.philosophy-closing-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: .8rem;
+}
+
+@media (max-width: 1050px) {
+  .philosophy-hero,
+  .philosophy-intro-grid,
+  .philosophy-collaboration-grid,
+  .philosophy-closing-panel {
+    grid-template-columns: 1fr;
+  }
+
+  .philosophy-symbol {
+    min-height: 22rem;
+  }
+
+  .creative-process {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .journey-timeline {
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 4rem;
+  }
+
+  .journey-line {
+    display: none;
+  }
+
+  .journey-point {
+    top: -1.2rem;
+  }
+
+  .philosophy-closing-actions {
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 760px) {
+  .philosophy-hero {
+    width: min(100% - 1.4rem, var(--v4-max));
+  }
+
+  .philosophy-value-grid,
+  .creative-process,
+  .journey-timeline {
+    grid-template-columns: 1fr;
+  }
+
+  .philosophy-value-card,
+  .philosophy-value-card:nth-child(1),
+  .philosophy-value-card:nth-child(2),
+  .philosophy-value-card:nth-child(3),
+  .philosophy-value-card:nth-child(4),
+  .philosophy-value-card:nth-child(5) {
+    grid-column: auto;
+  }
+
+  .creative-process-line {
+    display: none;
+  }
+
+  .philosophy-closing-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}

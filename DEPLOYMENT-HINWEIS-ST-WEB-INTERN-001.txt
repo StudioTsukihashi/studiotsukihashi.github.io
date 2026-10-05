@@ -1,0 +1,24 @@
+ST-WEB-INTERN-001 – Online-Test v0.1.5
+Website-Build: 5.1.2 (Internal review / online test)
+Ziel-URL: https://studiotsukihashi.com/team/intern/
+
+VOR DEM UPLOAD:
+1. Aus deiner lokal funktionierenden Portalversion die Datei config.js nehmen.
+2. Diese Datei nach Website/team/intern/config.js kopieren und die vorhandene Platzhalterdatei ersetzen.
+3. Prüfen: config.js darf NUR Supabase Project URL + Publishable Key enthalten.
+   Niemals service_role / Secret Key / Datenbankpasswort in die Website kopieren.
+4. In Supabase: Authentication → URL Configuration.
+   Produktionsadresse zulassen: https://studiotsukihashi.com/team/intern/
+   localhost darf für lokale Entwicklung erhalten bleiben.
+5. Danach Website wie gewohnt deployen.
+
+ERSTER ONLINE-TEST:
+- https://studiotsukihashi.com/team/intern/ aufrufen.
+- Torusuten: Login + MFA + Tsuki-no-Serenade-Zugriff prüfen.
+- Mina: Login + MFA + Verwaltungsübersicht bzw. eigene Projektrechte prüfen.
+- Testweise eine kleine Entwurfsdatei hochladen und wieder herunterladen.
+- Prüfen, dass fremde Projektfreigaben weiterhin nicht sichtbar sind.
+
+HINWEIS:
+- Der Portalpfad ist mit noindex/nofollow/noarchive versehen und in robots.txt gesperrt.
+- Das ist KEIN Sicherheitsmechanismus. Die echte Absicherung erfolgt weiterhin serverseitig durch Supabase Auth, MFA, RLS und RPC-Regeln.

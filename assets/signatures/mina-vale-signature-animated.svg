@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1536 1024" role="img" aria-labelledby="title desc">
+  <title id="title">Animierte digitale Signatur von Mina Vale</title>
+  <desc id="desc">Goldener Schriftzug Mina Vale mit roter Rose und dunkler Katze. Der Katzenschwanz und die Rose bewegen sich sanft.</desc>
+  <defs>
+    <clipPath id="roseClip"><ellipse cx="397" cy="373" rx="132" ry="105"/></clipPath>
+    <clipPath id="tailClip"><path d="M445 545 C500 535 535 552 520 604 C510 637 478 655 440 643 L425 614 C468 620 493 601 486 576 C480 558 461 557 445 560 Z"/></clipPath>
+    <clipPath id="leafClip"><path d="M238 425 H455 V565 H238 Z"/></clipPath>
+    <filter id="softGlow" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation="1.5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+
+  <image href="mina-vale-signature.webp" x="0" y="0" width="1536" height="1024"/>
+
+  <!-- Subtle animated overlays from the original artwork -->
+  <g clip-path="url(#roseClip)" class="rose-bloom">
+    <image href="mina-vale-signature.webp" x="0" y="0" width="1536" height="1024"/>
+  </g>
+  <g clip-path="url(#leafClip)" class="rose-leaves">
+    <image href="mina-vale-signature.webp" x="0" y="0" width="1536" height="1024"/>
+  </g>
+  <g clip-path="url(#tailClip)" class="cat-tail">
+    <image href="mina-vale-signature.webp" x="0" y="0" width="1536" height="1024"/>
+  </g>
+
+  <!-- Tiny petal accents make the breeze readable without becoming distracting -->
+  <g class="petal petal-a" filter="url(#softGlow)"><path d="M321 405 C334 394 345 398 348 411 C338 420 327 418 321 405Z" fill="#9f1827"/></g>
+  <g class="petal petal-b" filter="url(#softGlow)"><path d="M454 388 C467 379 477 384 478 396 C468 405 458 401 454 388Z" fill="#7f1320"/></g>
+
+  <style>
+    .rose-bloom{transform-box:view-box;transform-origin:397px 455px;animation:roseBreeze 7.5s ease-in-out infinite}
+    .rose-leaves{transform-box:view-box;transform-origin:365px 540px;animation:leafBreeze 6.2s ease-in-out infinite -1.4s}
+    .cat-tail{transform-box:view-box;transform-origin:442px 615px;animation:tailSway 4.4s ease-in-out infinite}
+    .petal{transform-box:view-box;transform-origin:center;opacity:.15}
+    .petal-a{animation:petalFloatA 8.8s ease-in-out infinite 1.2s}
+    .petal-b{animation:petalFloatB 10.2s ease-in-out infinite 3s}
+    @keyframes tailSway{0%,100%{transform:rotate(-2deg)}35%{transform:rotate(7deg)}65%{transform:rotate(3deg)}82%{transform:rotate(8deg)}}
+    @keyframes roseBreeze{0%,100%{transform:rotate(-.6deg) translate(0,0)}45%{transform:rotate(1.5deg) translate(1px,-1px)}72%{transform:rotate(.4deg) translate(0,-.5px)}}
+    @keyframes leafBreeze{0%,100%{transform:skewX(0deg) rotate(0deg)}50%{transform:skewX(1.2deg) rotate(.8deg)}}
+    @keyframes petalFloatA{0%,18%{opacity:0;transform:translate(0,0) rotate(0)}24%{opacity:.55}70%{opacity:.28}100%{opacity:0;transform:translate(36px,38px) rotate(42deg)}}
+    @keyframes petalFloatB{0%,26%{opacity:0;transform:translate(0,0) rotate(0)}31%{opacity:.45}78%{opacity:.22}100%{opacity:0;transform:translate(25px,31px) rotate(-38deg)}}
+    @media (prefers-reduced-motion:reduce){.rose-bloom,.rose-leaves,.cat-tail,.petal{animation:none!important}.petal{display:none}}
+  </style>
+</svg>

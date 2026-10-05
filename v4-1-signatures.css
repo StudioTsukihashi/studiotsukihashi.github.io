@@ -1,0 +1,159 @@
+
+/* Studio Tsukihashi Website V4.1
+   Sakura ambience + Creative Signature System */
+
+.sakura-layer {
+  position: fixed;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+  overflow: hidden;
+  contain: strict;
+}
+
+.sakura-petal {
+  position: absolute;
+  top: -10vh;
+  left: var(--x);
+  width: var(--size);
+  height: calc(var(--size) * .72);
+  opacity: var(--opacity);
+  border-radius: 70% 30% 65% 35%;
+  background:
+    radial-gradient(circle at 32% 30%, rgba(255,255,255,.88), transparent 24%),
+    linear-gradient(135deg, #f6d7e5 0%, #f3bccc 56%, #d99bb3 100%);
+  filter: drop-shadow(0 .2rem .35rem rgba(95,39,59,.14));
+  transform-origin: 55% 45%;
+  animation:
+    sakura-fall var(--duration) linear var(--delay) infinite,
+    sakura-sway var(--sway) ease-in-out var(--delay) infinite alternate;
+}
+
+.sakura-petal::after {
+  content: "";
+  position: absolute;
+  inset: 44% 40% 44% 40%;
+  border-radius: 50%;
+  background: rgba(172,96,123,.42);
+}
+
+@keyframes sakura-fall {
+  0% {
+    transform: translate3d(0,-12vh,0) rotate(0deg);
+  }
+  35% {
+    transform: translate3d(var(--drift-a),34vh,0) rotate(150deg);
+  }
+  70% {
+    transform: translate3d(var(--drift-b),73vh,0) rotate(320deg);
+  }
+  100% {
+    transform: translate3d(var(--drift-c),115vh,0) rotate(540deg);
+  }
+}
+
+@keyframes sakura-sway {
+  from { margin-left: -1.2rem; }
+  to { margin-left: 1.4rem; }
+}
+
+.creative-signature-teaser {
+  display: grid;
+  grid-template-columns: 1fr .8fr;
+  gap: clamp(2rem, 7vw, 7rem);
+  align-items: center;
+  border-block: 1px solid var(--v4-line);
+}
+
+.creative-signature-copy h2 {
+  margin: 0;
+  max-width: 48rem;
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(3rem, 6vw, 5.5rem);
+  line-height: .95;
+}
+
+.creative-signature-copy > p:last-of-type {
+  max-width: 46rem;
+  color: var(--v4-muted);
+  line-height: 1.8;
+}
+
+.creative-signature-demo {
+  position: relative;
+  min-height: 24rem;
+  display: grid;
+  place-items: center;
+}
+
+.creative-signature-demo span {
+  position: relative;
+  z-index: 3;
+  color: rgba(255,255,255,.82);
+  font-family: serif;
+  font-size: clamp(1.4rem, 4vw, 2.5rem);
+  letter-spacing: .18em;
+  animation: signature-name-breathe 8s ease-in-out infinite;
+}
+
+.mini-crescent {
+  position: absolute;
+  width: 10rem;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: 1px solid rgba(236,220,184,.42);
+  box-shadow: 0 0 3rem rgba(201,169,106,.12);
+}
+
+.mini-crescent::after {
+  content: "";
+  position: absolute;
+  width: 86%;
+  height: 86%;
+  top: 7%;
+  border-radius: 50%;
+  background: var(--v4-bg);
+}
+
+.mini-crescent-left {
+  transform: translateX(-3.3rem) rotate(8deg);
+  animation: crescent-left-orbit 12s ease-in-out infinite;
+}
+
+.mini-crescent-left::after { right: -18%; }
+
+.mini-crescent-right {
+  transform: translateX(3.3rem) rotate(188deg);
+  animation: crescent-right-orbit 12s ease-in-out infinite;
+}
+
+.mini-crescent-right::after { right: -18%; }
+
+@keyframes crescent-left-orbit {
+  0%,100% { transform: translateX(-3.3rem) rotate(8deg) scale(.96); }
+  50% { transform: translateX(-4.1rem) rotate(26deg) scale(1.04); }
+}
+
+@keyframes crescent-right-orbit {
+  0%,100% { transform: translateX(3.3rem) rotate(188deg) scale(.96); }
+  50% { transform: translateX(4.1rem) rotate(168deg) scale(1.04); }
+}
+
+@keyframes signature-name-breathe {
+  0%, 20%, 100% { opacity: .18; filter: blur(.25rem); }
+  40%, 78% { opacity: .95; filter: blur(0); }
+}
+
+@media (max-width: 900px) {
+  .creative-signature-teaser {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sakura-layer { display: none; }
+  .mini-crescent,
+  .creative-signature-demo span {
+    animation: none !important;
+  }
+}

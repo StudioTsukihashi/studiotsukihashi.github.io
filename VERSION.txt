@@ -1,0 +1,6 @@
+Studio Tsukihashi Website
+Version: 5.2.0
+Status: Internal review / online test build
+Date: 2026-10-05
+
+Schwerpunkt: Mina Vale vollständig in das Creative Signature System 2.0 integriert; bisherige separate SVG-Sonderlösung abgelöst.
